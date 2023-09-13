@@ -808,7 +808,7 @@ configure_ntpsec() {
     systemctl stop ntp.service;
     echo -e "\e[36m-Create new ntp.conf\e[0m";
     cat << __EOF__  > /etc/ntp.conf
-# /etc/ntp.conf, configuration for ntpd; see ntp.conf(5) for help
+# /etc/ntpsec/ntp.conf, configuration for ntpd; see ntp.conf(5) for help
 
 driftfile /var/lib/ntp/ntp.drift
 
@@ -1613,10 +1613,10 @@ configure_nftables;
 enable_ipforwarding;
 configure_dhcp_server;
 configure_dhclient_cleanup;
+configure_hostapd;
 configure_bind;
 configure_threatfox;
 configure_resolv;
-configure_hostapd;
 
 # CPU
 configure_cpu;

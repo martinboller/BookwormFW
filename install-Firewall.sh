@@ -1598,10 +1598,6 @@ configure_ntpsec;
 #configure_update-leap;
 configure_dhcp_ntp;
 
-# CrowdSec setup
-install_crowdsec;
-configure_crowdsec;
-
 # DShield setup
 #install_dshield;
 #configure_dshield;
@@ -1620,6 +1616,10 @@ configure_resolv;
 
 # CPU
 configure_cpu;
+
+# CrowdSec setup
+#install_crowdsec;
+#configure_crowdsec;
 
 # SSH setup
 install_ssh_public_keys;
